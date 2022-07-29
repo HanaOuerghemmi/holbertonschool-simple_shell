@@ -5,35 +5,43 @@
  */
 int main(void)
 {
-	/*char buffer[32];
-	char *b = buffer;
-	size_t bufferSize = 32;
-	size_t line;
-	char *promp = "$ ";*/
+	char *input;
+	char **parsed;
 
-/*config*/
+	/*config*/
 	/*loop*/
+	signal(SIGINT, SIG_N);
+
 	while (1)
 	{
-		// prompt some think to user .....
-	//	write(2, promp, 2);
+		/*prompt some think to user .....*/
+			write(STDOUT_FILENO, "$ ", 2);
+				/*line variable to read line (function) */
 
-	//	line = getline(&b, &bufferSize, stdin);
+		input = read_line();
+		if (!input)
+			continue;
+		if (strcmp(input, "exit\n") == 0 || feof(stdin))
+		{
+			free(input);
+			break;
+		}
 
-	//	printf("%s", b);
-		/*line variable to read line (function) */
-		char* input = read_line();
+		if (input[0] == '\0' || strcmp(input, "\n") == 0)
+		{
+			free(input);
+			continue;
+		}
 		/*parset  input in array of string (function)*/
-		char** parsed = parse(input);
+		parsed = parse(input);
 		/*execute parset (function)*/
 		execute(parsed);
+
 		/*free all (function)*/
 		free(input);
-        free(parsed);
-
-
+		free(parsed);
 	}
 	/*free all (function)*/
-
+	exit(EXIT_SUCCESS);
 	return (0);
 }
