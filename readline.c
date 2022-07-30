@@ -19,5 +19,9 @@ char *read_line()
 	}
 
 	line = getline(&buffer, &bufsize, stdin);
+
+	if (!line)
+		return (NULL);
+
 	return (buffer);
 }
