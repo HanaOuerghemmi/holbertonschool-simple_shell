@@ -88,11 +88,37 @@ _printf("print d :%d\n", -762534);
 
 ## 🃏  Functions used:
 
-* `write`
-* `va_start` 
-* `va_end` 
-* `va_copy`
-* `va_arg`
+* access
+* chdir
+* close
+* closedir
+* execve
+* exit
+* _exit
+* fflush
+* fork
+* free
+* getcwd
+* getline
+* getpid
+* isatty
+* kill
+* malloc
+* open
+* opendir
+* perror
+* read
+* readdir
+* signal
+* stat
+* lstat
+* fstat
+* strtok
+* wait
+* waitpid
+* wait3
+* wait4
+* write
  
 ## Authors:
 * [Hana Ouerghemmi](https://github.com/HanaOuerghemmi)
