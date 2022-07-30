@@ -15,7 +15,7 @@ int main(void)
 	while (1)
 	{
 		/*prompt some think to user .....*/
-			write(STDOUT_FILENO, "", 0);
+		write(STDOUT_FILENO, "", 0);
 		/*line variable to read line (function) */
 
 		input = read_line();
@@ -38,10 +38,13 @@ int main(void)
 		execute(parsed);
 
 		/*free all (function)*/
-		free(input);
-		free(parsed);
+
+
 	}
 	/*free all (function)*/
 	exit(EXIT_SUCCESS);
+	free(parsed);
+	free(input);	
+
 	return (0);
 }
