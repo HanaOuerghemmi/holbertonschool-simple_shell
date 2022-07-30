@@ -5,7 +5,7 @@
  */
 void execute(char** args) 
 {
-
+pid_t child_pid = fork();
 	if (strcmp(args[0], "cd") == 0) 
 	{
 
@@ -23,7 +23,7 @@ void execute(char** args)
 	else 
 	{
 
-		if (fork() == 0) 
+		if (child_pid == 0) 
 		{
 
 			int status_code = execvp(args[0], args);

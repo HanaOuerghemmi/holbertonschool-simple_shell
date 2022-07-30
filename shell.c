@@ -20,7 +20,7 @@ int main(void)
 
 		input = read_line();
 		if (!input)
-			continue;
+			break;
 		if (strcmp(input, "exit\n") == 0 || feof(stdin))
 		{
 			free(input);
@@ -38,13 +38,14 @@ int main(void)
 		execute(parsed);
 
 		/*free all (function)*/
+        	free(parsed);
+			free(input);	
 
 
 	}
 	/*free all (function)*/
 	exit(EXIT_SUCCESS);
-	free(parsed);
-	free(input);	
+	
 
 	return (0);
 }
