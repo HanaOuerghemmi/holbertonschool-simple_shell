@@ -15,7 +15,7 @@ int main(void)
 	while (1)
 	{
 		/*prompt some think to user .....*/
-		/*	write(STDOUT_FILENO, "$ ", 2);*/
+			write(STDOUT_FILENO, "", 0);
 		/*line variable to read line (function) */
 
 		input = read_line();
