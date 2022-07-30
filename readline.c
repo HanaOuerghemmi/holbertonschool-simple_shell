@@ -8,7 +8,7 @@ char *read_line()
 
 	char *buffer;
 	size_t bufsize = 100;
-	size_t line;
+/*	size_t line;*/
 
 	buffer = (char *) malloc(bufsize * sizeof(char));
 
@@ -18,7 +18,6 @@ char *read_line()
 		exit(1);
 	}
 
-	line = getline(&buffer, &bufsize, stdin);
-
+	/*line = getline(&buffer, &bufsize, stdin);*/
 	return (buffer);
 }
