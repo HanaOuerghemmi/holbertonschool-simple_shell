@@ -7,7 +7,7 @@
 </p>
 <p align="center">
 	<img ="Simple Shell" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeL2ivVpHRvL1aL3qa1svnG85MEwdJwfgb6g&amp;usqp=CAU"/>
-<img  alt="GIF" src="https://giphy.com/embed/A06UFEx8jxEwU" width="480" height="354" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/code-matrix-wallpaper-A06UFEx8jxEwU">via GIPHY</a></p>
+<img  alt="GIF" src="https://giphy.com/embed/A06UFEx8jxEwU" width="480" height="354" frameBorder="0" class="giphy-embed" allowFullScreen><p><a href="https://giphy.com/gifs/code-matrix-wallpaper-A06UFEx8jxEwU">via GIPHY</a></p>
 </p>
 
 <h3 align="center">
