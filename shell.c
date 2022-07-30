@@ -21,6 +21,17 @@ int main(void)
 		input = read_line();
 		if (!input)
 			break;
+		if (strcmp(input, "exit\n") == 0 || feof(stdin))
+		{
+			free(input);
+			break;
+		}
+
+		if (input[0] == '\0' || strcmp(input, "\n") == 0)
+		{
+			free(input);
+			continue;
+		}
 
 		/*parset  input in array of string (function)*/
 		parsed = parse(input);
