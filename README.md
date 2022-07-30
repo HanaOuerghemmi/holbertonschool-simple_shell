@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-<img src="https://giphy.com/gifs/code-matrix-wallpaper-A06UFEx8jxEwU" width="480" height="354" frameBorder="0" class="giphy-embed" />
+<img src="https://giphy.com/gifs/code-matrix-wallpaper-A06UFEx8jxEwU" width="480" height="354" frameBorder="0" />
 </p>
 
 <h3 align="center">
