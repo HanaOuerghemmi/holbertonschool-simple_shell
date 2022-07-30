@@ -1,18 +1,24 @@
 #include "shell.h"
-char* read_line() {
-  
-    char* buffer;
-    size_t bufsize = 100;
-    size_t line;
+/**
+ * read_line - function that read the line of the input
+ * Return: input char*
+ */
+char *read_line()
+{
 
-    buffer = (char*) malloc(bufsize * sizeof(char));
+	char *buffer;
+	size_t bufsize = 100;
+	size_t line;
 
-    if (buffer == NULL) {
-        printf("Error: Unable to allocate buffer");
-        exit(1);
-    }
+	buffer = (char *) malloc(bufsize * sizeof(char));
 
-    line = getline(&buffer, &bufsize, stdin);
+	if (buffer == NULL)
+	{
+		printf("Error: Unable to allocate buffer");
+		exit(1);
+	}
 
-    return buffer;
+	line = getline(&buffer, &bufsize, stdin);
+
+	return (buffer);
 }
