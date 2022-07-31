@@ -7,8 +7,6 @@ int main(void)
 {
 	char *input;
 	char **parsed = NULL;
-	int x = 0;
-
 	/** signal when ^C */
 	signal(SIGINT, SIG_N);
 	do {
