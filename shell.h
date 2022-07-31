@@ -21,7 +21,7 @@ void execute(char **args);
 void SIG_N(int signal);
 void print_env(void); 
 void _free_parsed(char **arr);
-
+void prompt(void)
 
 
 #endif
