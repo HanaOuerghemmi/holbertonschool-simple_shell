@@ -56,7 +56,7 @@ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 ```
 #### We are Testing via:
 
-* Your shell should work like this in interactive mode:
+* This in interactive mode:
 ```
 $ ./hsh
 ($) /bin/ls
