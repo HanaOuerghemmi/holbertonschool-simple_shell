@@ -51,6 +51,7 @@ int main(void)
 		}
 		/*free all (function)*/
 			free(input);
+			free(parsed);
 		if (!isatty(STDIN_FILENO))
 			exit(0);
 
