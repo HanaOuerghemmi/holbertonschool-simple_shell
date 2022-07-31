@@ -7,8 +7,6 @@ int main(void)
 {
 	char *input;
 	char **parsed = NULL;
-	int x = 0;
-
 	/** signal when ^C */
 	signal(SIGINT, SIG_N);
 	do {
@@ -28,21 +26,36 @@ int main(void)
 			free(input);
 			continue;
 		}
+	if (strcmp(input, "env\n") == 0)
+		{
+			print_env();
+			free(input);
+			continue;
+		}
+
 		/** parset  input in array of string (function)*/
 		parsed = parse(input);
-			if (parsed[1] != NULL)
-			{
-				x = atoi(parsed[1]);
-				exit(x);
-			}
-			/** execute the parsed Commande*/
+	
+						/** execute the parsed Commande*/
 			execute(parsed);
-		/*free all*/
-			free(parsed);
-			free(input);
-		if (!isatty(STDIN_FILENO))
-			exit(0);
-	} while (1);
+				/*free all*/
+			_free_parsed(parsed);
+				free(input);
+			} while (1);
 	exit(EXIT_SUCCESS);
 	return (0);
+}
+/**
+ * _free_parsed - function that free all elment in the array
+ * @arr: array 
+ */
+void _free_parsed(char **arr)
+{
+	int i;
+
+	for (i = 0; arr[i] != NULL; i++)
+	{
+		free(arr[i]);
+	}
+	free(arr);
 }
