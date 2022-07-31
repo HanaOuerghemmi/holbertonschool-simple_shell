@@ -6,15 +6,14 @@
 int main(void)
 {
 	char *input;
-	char **parsed;
+	char **parsed = NULL;
 	int x = 0;
 
 	/*config*/
 	/*loop*/
 	signal(SIGINT, SIG_N);
 
-	while (1)
-	{
+	do {
 
 		/*prompt some think to user .....*/
 		write(STDOUT_FILENO, "", 0);
@@ -39,23 +38,20 @@ int main(void)
 		/*parset  input in array of string (function)*/
 		parsed = parse(input);
 		/*execute parset (function)*/
-		execute(parsed);
-
-		if ((strcmp(parsed[0], "exit") == 0))
-		{
 			if (parsed[1] != NULL)
+			{
 				x = atoi(parsed[1]);
-			free(parsed);
-			exit(x);
+				exit(x);
+			}
+			execute(parsed);
 
-		}
 		/*free all (function)*/
-			free(input);
 			free(parsed);
+			free(input);
 		if (!isatty(STDIN_FILENO))
 			exit(0);
 
-	}
+	} while (1);
 	exit(EXIT_SUCCESS);
 	return (0);
 }
