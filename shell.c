@@ -7,7 +7,7 @@ int main(void)
 {
 	char *input;
 	char **parsed;
-	int x;
+	int x = 0;
 
 	/*config*/
 	/*loop*/
@@ -15,13 +15,15 @@ int main(void)
 
 	while (1)
 	{
+
 		/*prompt some think to user .....*/
 		write(STDOUT_FILENO, "", 0);
 		/*line variable to read line (function) */
 
 		input = read_line();
 		if (!input)
-			break;
+			exit(EXIT_SUCCESS);
+
 		if (strcmp(input, "exit\n") == 0 || feof(stdin))
 		{
 			free(input);
@@ -48,7 +50,6 @@ int main(void)
 
 		}
 		/*free all (function)*/
-			free(parsed);
 			free(input);
 		if (!isatty(STDIN_FILENO))
 			exit(0);
