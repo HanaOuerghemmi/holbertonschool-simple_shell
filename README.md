@@ -55,13 +55,6 @@ There are two ways of writing functions:
 $ gcc -Wall -Werror -Wextra -pedantic *.c
 ```
 ### EXEMPLE
-```
-_printf("print d :%d\n", -762534);
-
-```
-`the output` : 
-
-	print d : -762534
 
 
 ## 🎯  What our file stand for:
