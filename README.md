@@ -5,12 +5,9 @@
 <p align="center">
 	<b><i>HOLBERTON SCHOOL Simple Shell</i></b><br>
 </p>
-<p align="center">
-	<img ="Simple Shell" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeL2ivVpHRvL1aL3qa1svnG85MEwdJwfgb6g&amp;usqp=CAU"/>
-</p>
 
 <p align="center">
-<img src="https://giphy.com/gifs/code-matrix-wallpaper-A06UFEx8jxEwU" width="480" height="354" frameBorder="0" />
+<img src="https://media3.giphy.com/media/12W5Sg2koWYnwA/giphy.gif?cid=ecf05e47bi29h9avylnlsyc1dfbhg2fzfe5zy9ekrg75zhj6&rid=giphy.gif&ct=g" >
 </p>
 
 <h3 align="center">
