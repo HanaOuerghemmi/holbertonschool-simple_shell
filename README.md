@@ -13,7 +13,7 @@
 <img src="https://media.giphy.com/media/JVGLHEuzbVviw/giphy.gif" alt="funny GIF" width="100%">
 </p>
 <p align="center">
-<iframe src="https://giphy.com/embed/Lny6Rw04nsOOc" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/code-404-javascript-Lny6Rw04nsOOc">via GIPHY</a></p>
+<iframe src="https://giphy.com/gifs/code-404-javascript-Lny6Rw04nsOOc" </p>
 </p>
 
 <h3 align="center">
