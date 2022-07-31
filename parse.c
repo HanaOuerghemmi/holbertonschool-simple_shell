@@ -8,7 +8,7 @@
 char **parse(char *input)
 {
 	int length = 0;
-	int capacity = 16;
+	int capacity = 1024;
 	char **tokens = malloc(capacity * sizeof(char *));
 
 	char *delimiters = " \t\r\n";
@@ -21,7 +21,7 @@ char **parse(char *input)
 
 		if (length >= capacity)
 		{
-			capacity = (int) (capacity * 1.5);
+		//	capacity = (int) (capacity * 1.5);
 			tokens = realloc(tokens, capacity * sizeof(char *));
 		}
 
