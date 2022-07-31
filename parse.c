@@ -21,7 +21,7 @@ char **parse(char *input)
 
 		if (length >= capacity)
 		{
-		//	capacity = (int) (capacity * 1.5);
+		/** capacity = (int) (capacity * 1.5);*/
 			tokens = realloc(tokens, capacity * sizeof(char *));
 		}
 
