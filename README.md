@@ -49,7 +49,7 @@ There are two ways of writing functions:
 ![flowchart](_printfFLOWCHART.png)
 
 ## 🔭  Compilation and testing
-
+```
 #### We are compiling via:
 
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
@@ -79,7 +79,7 @@ hsh main.c shell.c test_ls_2
 hsh main.c shell.c test_ls_2
 $
 
-```
+
 ### EXEMPLE
 
 
