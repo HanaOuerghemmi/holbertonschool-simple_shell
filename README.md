@@ -55,7 +55,7 @@ There are two ways of writing functions:
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 ```
 #### We are Testing via:
-```
+
 * Your shell should work like this in interactive mode:
 ```
 $ ./hsh
