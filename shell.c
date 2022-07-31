@@ -7,6 +7,7 @@ int main(void)
 {
 	char *input;
 	char **parsed;
+	int x;
 
 	/*config*/
 	/*loop*/
@@ -38,15 +39,21 @@ int main(void)
 		/*execute parset (function)*/
 		execute(parsed);
 
-		/*free all (function)*/
-        	free(parsed);
-			free(input);	
+		if ((strcmp(parsed[0], "exit") == 0))
+		{
+			if (parsed[1] != NULL)
+				x = atoi(parsed[1]);
+			free(parsed);
+			exit(x);
 
+		}
+		/*free all (function)*/
+			free(parsed);
+			free(input);
+		if (!isatty(STDIN_FILENO))
+			exit(0);
 
 	}
-	/*free all (function)*/
 	exit(EXIT_SUCCESS);
-	
-
 	return (0);
 }
