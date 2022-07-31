@@ -14,12 +14,12 @@ char **parse(char *input)
 	char *delimiters = " \t\r\n";
 	char *token = strtok(input, delimiters);
 
-	while (token != NULL) 
+	while (token != NULL)
 	{
 		tokens[length] = token;
 		length++;
 
-		if (length >= capacity) 
+		if (length >= capacity)
 		{
 			capacity = (int) (capacity * 1.5);
 			tokens = realloc(tokens, capacity * sizeof(char *));

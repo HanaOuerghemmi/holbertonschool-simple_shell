@@ -13,10 +13,10 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-char** parse(char* input) ;
-char*  read_line(); 
+char **parse(char *input) ;
+char *read_line(); 
 void prompt();
-void execute(char** args); 
+void execute(char **args); 
 void SIG_N(int signal);
 
 
