@@ -29,32 +29,20 @@
  <h3 simple_shell </h3>  is a simple UNIX command language interpreter that reads commands from either a file or standard input and executes them.
 
 
-## 📇  Function prototype
+## 📇  Introduction to Function in Shell Scripting
 ```{r mon_bloc, echo = FALSE, WARNING = TRUE}
 
-int _printf(const char *format, ...);
-```
-where format can be a simple string without any specifiers or it can contain specifiers and the arguments corresponding to them.
+A function is a block of code that is reusable and performs certain operations. Like any other programming language, Shell-Scripting also supports functions. Functions are popular for the following reasons:
 
-## 📔  Implemented format specifiers
+* Help to reuse a piece of code.
+* Improve the readability of the program.
+* Make the program modular.
+* Make maintenance easier.
 
-| Specifier:|	Output							|	Example			|
-| :---------|:----------------------------------|-----------------:	|
-|	c		|		Character					|		H			|
-|	s		|		String						|		Hello		|
-|	d		|		decimal integer				|		100			|	
-|	i		|		Integer						|		100			|
-|	%		|		% followed by another %		|		%			|
-|	b		|		Binary						|		1010		|
-|	u		|	Unsigned decimal int			|		100			|
-|   o		|	Unsigned octal integer			|		1142		|
-|	x		|	Unsigned Hzxadecimal (lowcase)	|		7fa			|
-|	X		|	Unsigned Hexadecimal (uppercase)|		7FA			|
-|	r		|	Reverse a string				|		olleh		|
+There are two ways of writing functions:
 
-
-
->Check the [Man](https://github.com/HanaOuerghemmi/holbertonschool-printf/blob/main/man_3_printf) Page for detailed usage.
+* Keep the function in the same script where it is used.
+* Write a library of useful functions inside a file and import the file in the script where it is required.
 
 ## 🛠️  Algorithm and logic behind this
 * Check this flowchart explaining the functions flow
@@ -119,7 +107,32 @@ _printf("print d :%d\n", -762534);
 * wait3
 * wait4
 * write
- 
+ ## 🃏 OTHER Functions used:
+
+* _strncpy
+* _strlen
+* _putchar
+* _atoi
+* _puts
+* _strcmp
+* _isalpha
+* array_rev
+* intlen
+* _itoa
+* _strcat
+* _strcpy
+* _strchr
+* _strncmp
+* _strdup
+* _memcpy
+* _calloc
+* _realloc
+* _getenv
+* _getline
+* _strtok
+For More Info About It Check The Man Page by
+
+./man_simple_shell
 ## Authors:
 * [Hana Ouerghemmi](https://github.com/HanaOuerghemmi)
 * [ Majdi Aribi](https://github.com/majdideveloper)
