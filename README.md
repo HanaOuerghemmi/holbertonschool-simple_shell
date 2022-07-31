@@ -51,8 +51,34 @@ There are two ways of writing functions:
 ## 🔭  Compilation and testing
 
 #### We are compiling via:
-```{r mon_bloc, echo = FALSE, WARNING = TRUE}
-$ gcc -Wall -Werror -Wextra -pedantic *.c
+
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
+
+#### We are Testing via:
+
+* Your shell should work like this in interactive mode:
+
+$ ./hsh
+($) /bin/ls
+hsh main.c shell.c
+($)
+($) exit
+$
+
+* But also in non-interactive mode:
+
+$ echo "/bin/ls" | ./hsh
+hsh main.c shell.c test_ls_2
+$
+$ cat test_ls_2
+/bin/ls
+/bin/ls
+$
+$ cat test_ls_2 | ./hsh
+hsh main.c shell.c test_ls_2
+hsh main.c shell.c test_ls_2
+$
+
 ```
 ### EXEMPLE
 
