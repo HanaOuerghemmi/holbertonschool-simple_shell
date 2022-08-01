@@ -24,6 +24,8 @@ int main(void)
 	char **parsed = NULL;
 
 
+	/** signal when ^C */
+	signal(SIGINT, SIG_N);
 	do {
 		/*prompt some think to user .....*/
 		write(STDOUT_FILENO, "$ ", 0);
@@ -31,14 +33,25 @@ int main(void)
 		input = read_line();
 		if (!input)
 			continue;
-			/** parset  input in array of string (function)*/
+		if (strcmp(input, "exit\n") == 0 || feof(stdin))
+		{
+			free(input);
+			break;
+		}
+		if (input[0] == '\0' || strcmp(input, "\n") == 0)
+		{
+			free(input);
+			continue;
+		}
+		/** parset  input in array of string (function)*/
 		parsed = parse(input);
-			/** execute the parsed Commande*/
-		execute(parsed);
-			/*free all*/
-		_free_parsed(parsed);
+/** execute the parsed Commande*/
+			execute(parsed);
+		/*free all*/
+			_free_parsed(parsed);
 			free(input);
 	} while (1);
 	exit(EXIT_SUCCESS);
 	return (0);
 }
+
