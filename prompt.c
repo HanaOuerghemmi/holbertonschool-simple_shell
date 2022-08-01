@@ -4,5 +4,5 @@
  */
 void prompt(void)
 {
-	PRINTER("$ ");
+	write(STDOUT_FILENO, "$ ", 2);
 }
