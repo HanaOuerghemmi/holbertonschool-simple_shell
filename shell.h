@@ -14,14 +14,15 @@
 #include <unistd.h>
 
 extern char **environ;
+
 char **parse(char *input) ;
 char *read_line(); 
-void prompt();
+void prompt(void);
 void execute(char **args); 
 void SIG_N(int signal);
 void print_env(void); 
 void _free_parsed(char **arr);
-void prompt(void)
+void prompt(void);
 
 
 #endif

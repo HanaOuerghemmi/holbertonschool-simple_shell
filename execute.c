@@ -10,13 +10,13 @@ pid_t child_pid = fork();
 	{
 
 		chdir(args[1]);
-		printf("Changing directories to: %s\n", args[1]);
+		printf("changing directories to: %s\n", args[1]);
 
 	} 
 	else if ((strcmp(args[0], "quit") == 0)) 
 	{
 
-		printf("Quitting\n");
+		printf("quitting\n");
 		exit(0);
 
 	} 
@@ -30,7 +30,7 @@ pid_t child_pid = fork();
 
 			if (status_code == -1) 
 			{
-			/*	printf("Error: Your command terminated incorrectly\n");*/
+			/*	printf("error: your command terminated incorrectly\n");*/
 				exit(1);
 			}
 
