@@ -2,17 +2,17 @@
 
 /**
  * _free_parsed - function that free all elment in the array
- * @arr: array 
+ * @parse: array of string 
  */
-void _free_parsed(char **arr)
+void _free_parsed(char **parse)
 {
 	int i;
 
-	for (i = 0; arr[i] != NULL; i++)
+	for (i = 0; parse[i] != NULL; i++)
 	{
-		free(arr[i]);
+		free(parse[i]);
 	}
-	free(arr);
+	free(parse);
 }
 /**
  * main - this main of our shell
@@ -24,8 +24,6 @@ int main(void)
 	char **parsed = NULL;
 
 
-	/** signal when ^C */
-	signal(SIGINT, SIG_N);
 	do {
 		/*prompt some think to user .....*/
 		write(STDOUT_FILENO, "$ ", 0);
@@ -33,22 +31,12 @@ int main(void)
 		input = read_line();
 		if (!input)
 			continue;
-		if (strcmp(input, "exit\n") == 0 || feof(stdin))
-		{
-			free(input);
-			break;
-		}
-		if (input[0] == '\0' || strcmp(input, "\n") == 0)
-		{
-			free(input);
-			continue;
-		}
-		/** parset  input in array of string (function)*/
+			/** parset  input in array of string (function)*/
 		parsed = parse(input);
-/** execute the parsed Commande*/
-			execute(parsed);
-		/*free all*/
-			_free_parsed(parsed);
+			/** execute the parsed Commande*/
+		execute(parsed);
+			/*free all*/
+		_free_parsed(parsed);
 			free(input);
 	} while (1);
 	exit(EXIT_SUCCESS);
