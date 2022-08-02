@@ -84,13 +84,16 @@ $
 
 ## 🎯  What our file stand for:
 
-* [Main.h](https://github.com/HanaOuerghemmi/holbertonschool-printf/blob/main/main.h) :The Header file
-* [Get_function.c](https://github.com/HanaOuerghemmi/holbertonschool-printf/blob/main/get_function.c):  This file contains the functions to handle each argument type like (s, c, %, i, d).
-* [Get_more_func.c](https://github.com/HanaOuerghemmi/holbertonschool-printf/blob/main/get_more_func.c) : This file contains the function to handle each argument type like (b,u, o, x, X)
-* [even_func.c](https://github.com/HanaOuerghemmi/holbertonschool-printf/blob/main/even_func.c): This file contains the function to handle each argument type like (r, )
-* [get_all.c](https://github.com/HanaOuerghemmi/holbertonschool-printf/blob/main/get_all.c) : this file containe the function how cheks function 
-* [stdr_function.c](https://github.com/HanaOuerghemmi/holbertonschool-printf/blob/main/stdr_function.c) : This file contains the standard function (_putchar).
-
+* [README.md](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/README.md) :The README file
+* [AUTHORS](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell):  This file contains the authors of the project
+* [execute.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/execute.c) : This file contains the function to handle each argument type like (b,u, o, x, X)
+* [parse.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/parse.c): This file contains the function to handle each argument type like (r, )
+* [print_env.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/print_env.c) : this file containe the function how cheks function 
+* [prompt.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/prompt.c) : This file contains the standard function (_putchar).
+* [readline.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/readline.c) : This file contains the standard function (_putchar).
+* [shell.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/shell.c) : This file contains the standard function (_putchar).
+* [shell.h](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/shell.h) : The Header file
+* [signal.c]
 
 ## 🃏  Functions used:
 
