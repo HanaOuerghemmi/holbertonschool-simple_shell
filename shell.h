@@ -7,6 +7,11 @@
 #define PRINTER(c) (write(STDOUT_FILENO, c, _strlen(c)))
 
 
+/**
+ * struct - builtin
+ */
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -30,15 +35,15 @@ char *read_line();
 char **split_line(char *line);
 void exec(char **args);
 int num_builtins();
-void kash_cd(char **args); 
-void kash_exit(__attribute__ ((unused)) char **args);
-void kash_help(__attribute__ ((unused)) char **args);
+void sh_cd(char **args); 
+void sh_exit(__attribute__ ((unused)) char **args);
+void sh_help(__attribute__ ((unused)) char **args);
 
 
-struct builtin {
+typedef struct builtin {
     char *name;
     void (*func)(char **args);
-};
+} builtin;
 
 
 
