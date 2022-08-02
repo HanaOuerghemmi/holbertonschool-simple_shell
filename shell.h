@@ -38,7 +38,7 @@ int num_builtins();
 void sh_cd(char **args); 
 void sh_exit(__attribute__ ((unused)) char **args);
 void sh_help(__attribute__ ((unused)) char **args);
-
+void SIG_N(int signal);
 
 typedef struct builtin {
     char *name;

@@ -9,6 +9,7 @@ int main(void)
 	char *line;
 	char **tokens;
 
+	signal(SIGINT, SIG_N);
 	while (true)
 	{
 		/*  printf("$ ");*/
