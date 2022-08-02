@@ -7,7 +7,6 @@ void kash_exit(__attribute__ ((unused)) char **args) {
     exit(0);
 }
 
-// Change the working directory.
 void kash_cd(char **args) {
     if (args[1] == NULL) {
         fprintf(stderr, "shell: cd: missing argument\n");
@@ -18,7 +17,6 @@ void kash_cd(char **args) {
     }
 }
 
-// Print the shell's help text.
 void kash_help(__attribute__ ((unused)) char **args) {
     char *helptext =
         "shell - the Shell. "

@@ -40,7 +40,6 @@ struct builtin {
     void (*func)(char **args);
 };
 
-// Array of built in commands.
 
 
 
