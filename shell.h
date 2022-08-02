@@ -9,8 +9,8 @@
 
 typedef struct builtin
 {
-    char *name;
-    void (*func)(char **args);
+	char *name;
+	void (*func)(char **args);
 } builtin;
 
 
