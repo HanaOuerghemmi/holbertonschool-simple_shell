@@ -37,8 +37,8 @@ void exec(char **args) {
 
 
 
-/**
+
 int num_builtins() {
     return sizeof(builtins) / sizeof(struct builtin);
-}**/
+}
 
