@@ -23,6 +23,7 @@ void SIG_N(int signal);
 void print_env(void); 
 void _free_parsed(char **arr);
 void prompt(void);
+void print_error(char *input, int counter, char **argv)
 
 
 #endif
