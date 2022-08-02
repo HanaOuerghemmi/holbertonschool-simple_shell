@@ -20,7 +20,7 @@ char **split_line(char *line)
 
 	delimiters = " \t\r\n";
 	token = strtok(line, delimiters);
-
+/** Returns ptr to the first token found in line.null ptr if no tokens*/
 	while (token != NULL)
 	{
 		tokens[length] = token;
@@ -32,7 +32,7 @@ char **split_line(char *line)
 			tokens = realloc(tokens, capacity * sizeof(char *));
 			if (!tokens)
 			{
-				perror("shell");
+				perror("shell");/**prints a descriptive error*/
 				exit(1);
 			}
 		}
