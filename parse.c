@@ -9,11 +9,22 @@ char **parse(char* input)
 {
 	unsigned long i;
 	int all_tokens_buffer = 100;
-	char **all_tokens = malloc(all_tokens_buffer * sizeof(char *));
+	char **all_tokens; /* = malloc(all_tokens_buffer * sizeof(char *)); */
+
+
+
 	int all_tokens_counter = 0;
 	int current_token_buffer = 1024;
 	char *current_token = malloc(current_token_buffer * sizeof(char *));
 	int current_token_counter = 0;
+
+	all_tokens  = malloc(all_tokens_buffer * sizeof(char *));
+	if (all_tokens == NULL)
+		exit(0);
+
+	current_token = malloc(current_token_buffer * sizeof(char *));
+	if (current_token == NULL)
+		exit(0);
 
 	for ( i = 0; i < strlen(input); i++)
 	{
@@ -62,9 +73,9 @@ char **parse(char* input)
 			all_tokens_counter++;
 
 			all_tokens[all_tokens_counter] = NULL;
-		
+
 			break;
-	
+
 		} 
 		else 
 		{
