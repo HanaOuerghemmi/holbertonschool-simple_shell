@@ -10,7 +10,7 @@
 <img src="https://media3.giphy.com/media/12W5Sg2koWYnwA/giphy.gif?cid=ecf05e47bi29h9avylnlsyc1dfbhg2fzfe5zy9ekrg75zhj6&rid=giphy.gif&ct=g" >
 </p>
 
-<img src="https://giphy.com/embed/gU25raLP4pUu4" >
+<img src="https://giphy.com/gifs/blue-screen-gU25raLP4pUu4?utm_source=iframe&utm_medium=embed&utm_campaign=Embeds&utm_term=" >
 </p>
 
 <h3 align="center">
