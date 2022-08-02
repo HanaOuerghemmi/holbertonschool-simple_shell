@@ -46,7 +46,7 @@ There are two ways of writing functions:
 
 ## 🛠️  Algorithm and logic behind this
 * Check this flowchart explaining the functions flow
-![flowchart](_printfFLOWCHART.png)
+![flowchart](flowchart.jpg)
 
 ## 🔭  Compilation and testing
 
