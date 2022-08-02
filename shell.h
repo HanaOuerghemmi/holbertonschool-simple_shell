@@ -36,7 +36,7 @@ extern char **environ;
 char *read_line();
 char **split_line(char *line);
 void exec(char **args);
-void sh_cd(char **args); 
+void sh_cd(char **args);
 void sh_exit(__attribute__ ((unused)) char **args);
 void sh_help(__attribute__ ((unused)) char **args);
 void SIG_N(int signal);
