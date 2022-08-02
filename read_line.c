@@ -11,7 +11,7 @@ char *read_line(void)
 	int err = 0;
 
 	len = getline(&line, &buflen, stdin);
-	if (strlen < 0)
+	if (len < 0)
 	{
 		if (err)
 		{
