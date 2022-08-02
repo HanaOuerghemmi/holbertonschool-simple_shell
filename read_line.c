@@ -14,6 +14,7 @@ char *read_line() {
         if (errno) {
             perror("shell");
         }
+		free(line);
         exit(0);
     }
     return line;
