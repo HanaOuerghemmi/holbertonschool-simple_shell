@@ -27,6 +27,18 @@
 ## 🔍 Description: 
 
  <h3 simple_shell </h3>  is a simple UNIX command language interpreter that reads commands from either a file or standard input and executes them.
+## 🎯  What our file stand for:
+
+* [README.md](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/README.md) :The README file
+* [AUTHORS](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell):  This file contains the authors of the project
+* [execute.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/execute.c) : This file contains the function to handle each argument type like (b,u, o, x, X)
+* [parse.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/parse.c): This file contains the function to handle each argument type like (r, )
+* [print_env.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/print_env.c) : this file containe the function how cheks function 
+* [prompt.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/prompt.c) : This file contains the standard function (_putchar).
+* [readline.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/readline.c) : This file contains the standard function (_putchar).
+* [shell.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/shell.c) : This file contains the standard function (_putchar).
+* [shell.h](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/shell.h) : The Header file
+* [signal.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/signal.c) :
 
 
 ## 📇  Introduction to Function in Shell Scripting
@@ -82,18 +94,6 @@ $
 ### EXEMPLE
 
 
-## 🎯  What our file stand for:
-
-* [README.md](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/README.md) :The README file
-* [AUTHORS](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell):  This file contains the authors of the project
-* [execute.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/execute.c) : This file contains the function to handle each argument type like (b,u, o, x, X)
-* [parse.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/parse.c): This file contains the function to handle each argument type like (r, )
-* [print_env.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/print_env.c) : this file containe the function how cheks function 
-* [prompt.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/prompt.c) : This file contains the standard function (_putchar).
-* [readline.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/readline.c) : This file contains the standard function (_putchar).
-* [shell.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/shell.c) : This file contains the standard function (_putchar).
-* [shell.h](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/shell.h) : The Header file
-* [signal.c](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/signal.c) :
 
 ## 🃏  Functions used:
 
