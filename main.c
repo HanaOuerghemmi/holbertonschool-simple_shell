@@ -12,16 +12,18 @@ int main(void)
 	signal(SIGINT, SIG_N);
 	while (true)
 	{
-		/*  printf("$ ");*/
+		/**  printf("$ ");*/
+		/** read line commande */
 		line = read_line();
+		/** parse the line in arry of string*/
 		tokens = split_line(line);
 
-
+		/** execute the line*/
 		if (tokens[0] != NULL)
 		{
 			exec(tokens);
 		}
-
+		/** free all */
 		free(tokens);
 		free(line);
 	}

@@ -34,6 +34,7 @@ void sh_help(__attribute__ ((unused)) char **args)
 {
 	char *helptext =
 		"shell - the Shell. "
+
 		"The following commands are built in:\n"
 		"  cd       Change the working directory.\n"
 		"  exit     Exit the shell.\n"

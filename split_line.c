@@ -20,7 +20,7 @@ char **split_line(char *line)
 
 	delimiters = " \t\r\n";
 	token = strtok(line, delimiters);
-/** Returns ptr to the first token found in line.null ptr if no tokens*/
+/** Returns pointer to the first token found in line.null ptr if no tokens*/
 	while (token != NULL)
 	{
 		tokens[length] = token;
