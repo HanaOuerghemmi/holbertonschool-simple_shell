@@ -30,7 +30,7 @@
 
 
 ## 📇  Introduction to Function in Shell Scripting
-```{r mon_bloc, echo = FALSE, WARNING = TRUE}
+{r mon_bloc, echo = FALSE, WARNING = TRUE}
 
 A function is a block of code that is reusable and performs certain operations. Like any other programming language, Shell-Scripting also supports functions. Functions are popular for the following reasons:
 
@@ -49,7 +49,7 @@ There are two ways of writing functions:
 ![flowchart](_printfFLOWCHART.png)
 
 ## 🔭  Compilation and testing
-```
+
 #### We are compiling via:
 ```
 gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
