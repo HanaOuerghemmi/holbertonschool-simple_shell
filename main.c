@@ -5,7 +5,7 @@ int main() {
 	char **tokens;
 
     while (true) {
-        printf("$ ");
+      /*  printf("$ ");*/
         line = read_line();
         tokens = split_line(line);
 

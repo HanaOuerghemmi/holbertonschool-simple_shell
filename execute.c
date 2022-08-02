@@ -24,7 +24,7 @@ void exec(char **args) {
     if (child_pid == 0) {
         execvp(args[0], args);
         perror("shell");
-        exit(1);
+        exit(0);
     } else if (child_pid > 0) {
         int status;
         do {
