@@ -25,6 +25,7 @@ int main(void)
 		free(tokens);
 		free(line);
 	}
+	exit(EXIT_SUCCESS);
 	return (0);
 }
 
