@@ -26,9 +26,12 @@ int main(void)
 
 	/** signal when ^C */
 	signal(SIGINT, SIG_N);
+	
 	do {
 		/*prompt some think to user .....*/
-		write(STDOUT_FILENO, "$ ", 0);
+	/*	write(STDIN_FILENO, "$ ", 2);*/
+		printf("$ ");
+		fflush(stdin);
 		/** read the line commande */
 		input = read_line();
 		if (!input)
@@ -47,6 +50,7 @@ int main(void)
 		parsed = parse(input);
 /** execute the parsed Commande*/
 			execute(parsed);
+
 		/*free all*/
 			_free_parsed(parsed);
 			free(input);

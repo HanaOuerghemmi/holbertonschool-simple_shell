@@ -5,7 +5,7 @@
  */
 void execute(char** args) 
 {
-pid_t child_pid = fork();
+	pid_t child_pid = fork();
 	if (strcmp(args[0], "cd") == 0) 
 	{
 
@@ -30,10 +30,15 @@ pid_t child_pid = fork();
 
 			if (status_code == -1) 
 			{
-			/*	printf("error: your command terminated incorrectly\n");*/
+				/*	printf("error: your command terminated incorrectly\n");*/
 				exit(1);
 			}
 
+
+		}
+		else
+		{
+			wait(NULL);
 		}
 
 	}
