@@ -3,7 +3,6 @@
  * exec - function execute the commande
  * @args: the commande to execute
  */
-
 void exec(char **args)
 {
 	int i;
@@ -37,10 +36,10 @@ int num_builtins = sizeof(builtins) / sizeof(struct builtin);
 	else if (child_pid > 0)
 	{
 		do {
-
 			waitpid(child_pid, &status, WUNTRACED);
-
 		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
+		/** WIFEXITED and WIFSIGNALED both be false*/
+		/** Is it guaranteed that the process was not killed in this case*/
 	}
 	else
 	{
