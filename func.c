@@ -42,4 +42,17 @@ void sh_help(__attribute__ ((unused)) char **args)
 		;
 	printf("%s", helptext);
 }
+/**
+ * _free_tokens - function that free all elment in the tokens
+ * @token: the array to freed
+ */
+void _free_tokens(char **token)
+{
+	int i;
 
+	for (i = 0; token[i] != NULL; i++)
+	{
+		free(token[i]);
+	}
+	free(token);
+}

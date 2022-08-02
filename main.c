@@ -24,7 +24,7 @@ int main(void)
 			exec(tokens);
 		}
 		/** free all */
-		free(tokens);
+		free(tokens);/**_free_tokens(tokens)*/
 		free(line);
 	}
 	exit(EXIT_SUCCESS);
