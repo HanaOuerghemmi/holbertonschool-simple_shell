@@ -1,6 +1,12 @@
 #ifndef _SHELL_H_
 #define _SHELL_H_
 
+
+#define BUFSIZE 1024
+#define DELIM " \t\r\n\a"
+#define PRINTER(c) (write(STDOUT_FILENO, c, _strlen(c)))
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -23,7 +29,8 @@ void SIG_N(int signal);
 void print_env(void); 
 void _free_parsed(char **arr);
 void prompt(void);
-void print_error(char *input, int counter, char **argv)
+
+
 
 
 #endif
