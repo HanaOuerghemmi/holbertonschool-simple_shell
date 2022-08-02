@@ -2,21 +2,22 @@
 
 
 
-/**struct builtin builtins[] = {
+struct builtin builtins[] = {
     {"help", kash_help},
     {"exit", kash_exit},
     {"cd", kash_cd},
-};**/
+};
 
 void exec(char **args) {
+	int i;
     pid_t child_pid ;
 
-   /** for ( i = 0; i < num_builtins(); i++) {
+    for ( i = 0; i < num_builtins(); i++) {
         if (strcmp(args[0], builtins[i].name) == 0) {
             builtins[i].func(args);
             return;
         }
-    }**/
+    }
 
      child_pid = fork();
 
