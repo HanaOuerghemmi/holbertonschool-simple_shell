@@ -19,16 +19,30 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
+
+
+
+
+
 extern char **environ;
 
-char **parse(char *input) ;
-char *read_line(); 
-void prompt(void);
-void execute(char **args); 
-void SIG_N(int signal);
-void print_env(void); 
-void _free_parsed(char **arr);
-void prompt(void);
+char *read_line();
+char **split_line(char *line);
+void exec(char **args);
+int num_builtins();
+void kash_cd(char **args); 
+void kash_exit(__attribute__ ((unused)) char **args);
+void kash_help(__attribute__ ((unused)) char **args);
+
+
+struct builtin {
+    char *name;
+    void (*func)(char **args);
+};
+
+// Array of built in commands.
+
+
 
 
 
