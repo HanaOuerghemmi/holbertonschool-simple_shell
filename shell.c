@@ -29,9 +29,9 @@ int main(void)
 	
 	do {
 		/*prompt some think to user .....*/
-	/*	write(STDIN_FILENO, "$ ", 2);*/
-		printf("$ ");
-		fflush(stdin);
+		write(STDIN_FILENO, "$ ", 2);
+	/*	printf("$ ");*/
+	/*	fflush(stdin);*/
 		/** read the line commande */
 		input = read_line();
 		if (!input)
