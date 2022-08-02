@@ -15,7 +15,7 @@ char **parse(char* input)
 
 	int all_tokens_counter = 0;
 	int current_token_buffer = 1024;
-	char *current_token = malloc(current_token_buffer * sizeof(char *));
+	char *current_token ;/* malloc(current_token_buffer * sizeof(char *));*/
 	int current_token_counter = 0;
 
 	all_tokens  = malloc(all_tokens_buffer * sizeof(char *));
