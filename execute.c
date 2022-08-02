@@ -30,7 +30,7 @@ void execute(char** args)
 
 			if (status_code == -1) 
 			{
-				/**	printf("error: your command terminated incorrectly\n");*/
+				/**	   Uprintf("error: your command terminated incorrectly\n");*/
 				exit(1);
 			}
 
