@@ -30,7 +30,7 @@ int num_builtins = sizeof(builtins) / sizeof(struct builtin);
 	{
 		execvp(args[0], args);
 		/** takes in the name of the UNIX command to run as the first argument*/
-		perror("shell");/** prints a descriptive error message to stderr*/
+		perror(args[0]);/** prints a descriptive error message to stderr*/
 		exit(1);
 	}
 	else if (child_pid > 0)
