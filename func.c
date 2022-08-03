@@ -1,11 +1,31 @@
 #include "shell.h"
 /**
+ * _free_tokens - function that free all elment in the tokens
+ * @token: the array to freed
+ */
+void _free_tokens(char **token)
+{
+	int i;
+
+	for (i = 0; token[i] != NULL; i++)
+	{
+		free(token[i]);
+	}
+	free(token);
+}
+/**
  * sh_exit- function exit
  * @args: the argument
  */
 void sh_exit(__attribute__ ((unused)) char **args)
 {
-	exit(0);
+
+	if (args[1] == NULL)
+	{
+		_free_tokens(args);
+		exit(0);
+	}
+
 }
 /**
  * sh_cd - function cd
@@ -42,17 +62,4 @@ void sh_help(__attribute__ ((unused)) char **args)
 		;
 	printf("%s", helptext);
 }
-/**
- * _free_tokens - function that free all elment in the tokens
- * @token: the array to freed
- */
-void _free_tokens(char **token)
-{
-	int i;
 
-	for (i = 0; token[i] != NULL; i++)
-	{
-		free(token[i]);
-	}
-	free(token);
-}
