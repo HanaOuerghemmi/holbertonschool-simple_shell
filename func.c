@@ -25,6 +25,11 @@ void sh_exit(__attribute__ ((unused)) char **args)
 		_free_tokens(args);
 		exit(0);
 	}
+	else
+	{	
+		_free_tokens(args);
+		exit(2);
+	}
 
 }
 /**
