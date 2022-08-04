@@ -3,20 +3,23 @@
  * main - program main of the shell
  * Return: 0
  */
-int	main( void )
+int	main(void)
 {
 	char	*buffer = NULL;
 	size_t	buf_size = 2048;
 	char **cmd;
 
 	buffer = (char *)calloc(sizeof(char), buf_size);
-	if (buffer == NULL) {
+	if (buffer == NULL)
+	{
 		perror("Malloc failure");
 		return (EXIT_FAILURE);
 	}
 
+	signal(SIGINT, SIG_N);
 
-	while (getline(&buffer, &buf_size, stdin) > 0) {
+	while (getline(&buffer, &buf_size, stdin) > 0) 
+	{
 		cmd = split(buffer, " \t\r\n");
 		get_absolute_path(cmd);
 
