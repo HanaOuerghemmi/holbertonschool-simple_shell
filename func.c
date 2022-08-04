@@ -19,7 +19,7 @@ void _free_tokens(char **token)
  */
 void sh_exit(__attribute__ ((unused)) char **args)
 {
-    int status;
+	int status;
 
 	if (args[1] == NULL)
 	{
@@ -27,7 +27,7 @@ void sh_exit(__attribute__ ((unused)) char **args)
 		exit(0);
 	}
 	else
-	{	
+	{
 		status = atoi(args[1]);
 		_free_tokens(args);
 		exit(status);
