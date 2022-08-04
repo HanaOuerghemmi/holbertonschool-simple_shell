@@ -15,12 +15,12 @@ char **split(char *raw_cmd, char *limit)
 
 	while (ptr)
 	{
-		cmd = (char  **)realloc(cmd, ((idx + 1) * sizeof(char *)));
+		cmd = realloc(cmd, ((idx + 1) * sizeof(char *)));
 		cmd[idx] = strdup(ptr);
 		ptr = strtok(NULL, limit);
 		++idx;
 	}
-	cmd = (char **)realloc(cmd, ((idx + 1) * sizeof(char *)));
+	cmd = realloc(cmd, ((idx + 1) * sizeof(char *)));
 	cmd[idx] = NULL;
 	return (cmd);
 }
