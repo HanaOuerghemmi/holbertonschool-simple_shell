@@ -32,7 +32,17 @@
 
 
 ## 📇  simple shell steps:
-{r mon_bloc, echo = FALSE, WARNING = TRUE}
+
+The shell is an infinity loop that keep running until exit command or end of file …..
+			Pic5 
+Read the input
+Parse or traite the commande
+			Pic 6
+Execute the commande
+		. 	Search the commande in the environment
+		.	search in the path 
+		. 	create the child process for the commande execution
+		.	free the memory return the output and return at the beginning
 
 A function is a block of code that is reusable and performs certain operations. Like any other programming language, Shell-Scripting also supports functions. Functions are popular for the following reasons:
 
