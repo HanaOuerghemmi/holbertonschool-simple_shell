@@ -33,7 +33,8 @@
 
 ## 📇  simple shell steps:
 
-The shell is an infinity loop that keep running until exit command or end of file …..
+The shell is an infinity loop that keep running until exit command or end of file.
+<br>
 			Pic5 
 Read the input
 Parse or traite the commande
