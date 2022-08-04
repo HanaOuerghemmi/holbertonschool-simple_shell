@@ -30,6 +30,13 @@ int	main(void)
 			free(cmd);
 			exit(1);
 		}
+		if (strcmp(cmd[0], "env") == 0)
+		{
+			free_array(cmd);
+			print_env();
+			continue;
+		}
+
 		if (stat(cmd[0], &status) != 0)
 			/*get_absolute_path(cmd);*/
 			get_absolute_path(cmd);/** get the path*/

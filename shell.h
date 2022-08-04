@@ -45,6 +45,8 @@ char **split(char *raw_cmd, char *limit);
 void exec_cmd(char **cmd);
 void get_absolute_path(char **cmd);
 void	free_array(char **array);
+void print_env(void);
+
 
 
 
