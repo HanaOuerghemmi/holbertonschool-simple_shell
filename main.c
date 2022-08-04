@@ -10,7 +10,7 @@ int	main(void)
 	char **cmd;
 	struct stat status;
 
-	buffer = (char *)calloc(sizeof(char), buf_size);
+	buffer = calloc(sizeof(char), buf_size);
 	if (buffer == NULL)
 	{
 		perror("Malloc failure");
@@ -23,11 +23,16 @@ int	main(void)
 	{
 		/** parce the line in array of string*/
 		cmd = split(buffer, " \t\r\n");
-
+		if (!cmd)
+			exit(EXIT_SUCCESS);
+		if (strcmp(cmd[0], "exit") == 0)
+		{
+			free(cmd);
+			exit(1);
+		}
 		if (stat(cmd[0], &status) != 0)
 			/*get_absolute_path(cmd);*/
 			get_absolute_path(cmd);/** get the path*/
-
 		if (cmd[0] == NULL)
 			printf("Command not found\n");
 		else
@@ -37,7 +42,6 @@ int	main(void)
 		free_array(cmd);
 
 	}
-
 	free(buffer);
 	exit(EXIT_SUCCESS);
 	return (0);
