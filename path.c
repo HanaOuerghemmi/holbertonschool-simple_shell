@@ -19,18 +19,17 @@ void get_absolute_path(char **cmd)
 		path_split = split(path, ":");
 		free(path);
 		path = NULL;
-		/* loop diract of path until find it*/
 		for (i = 0; path_split[i]; i++)
 		{
 			/* alloc len path + '//' + len  binaire + 1 for the '\0' */
-			bin = calloc(sizeof(char), (strlen(path_split[i]) + 1 + strlen(cmd[0]) + 1));
+			bin = calloc(sizeof(char),
+					(strlen(path_split[i]) + 1 + strlen(cmd[0]) + 1));
 			if (bin == NULL)
 				break;
-			/* concat path , the '//' and cmd */
-			strcat(bin, path_split[i]);
+			strcat(bin, path_split[i]); /* concat path , the '//' and cmd */
 			strcat(bin, "/");
 			strcat(bin, cmd[0]);
-	/* verfif the file exist and exit the loop if the acc=> 0 */
+	/* verf if the file exist and exit the loop if the acc=> 0 */
 			if (access(bin, F_OK) == 0)
 				break;
 			/* free freee it */
