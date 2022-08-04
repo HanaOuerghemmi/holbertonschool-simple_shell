@@ -36,14 +36,22 @@
 The shell is an infinity loop that keep running until exit command or end of file.
 <br>
 			Pic5 
+			<br>
 Read the input
 Parse or traite the commande
+<br>
 			Pic 6
+			<br>
 Execute the commande
+<br>
 		. 	Search the commande in the environment
+		<br>
 		.	search in the path 
+		<br>
 		. 	create the child process for the commande execution
+		<br>
 		.	free the memory return the output and return at the beginning
+		<br>
 
 A function is a block of code that is reusable and performs certain operations. Like any other programming language, Shell-Scripting also supports functions. Functions are popular for the following reasons:
 
