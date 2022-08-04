@@ -3,31 +3,32 @@
  * main - program main of the shell
  * Return: 0
  */
-int main(void)
+int	main()
 {
+	char	*buffer = NULL;
+	size_t	buf_size = 2048;
+	char **cmd;
 
-	char *line;
-	char **tokens;
-
-	signal(SIGINT, SIG_N);
-	while (true)
-	{
-		/**  printf("$ ");*/
-		/** read line commande */
-		line = read_line();
-		/** parse the line in arry of string*/
-		tokens = split_line(line);
-
-		/** execute the line*/
-		if (tokens[0] != NULL)
-		{
-			exec(tokens);
-		}
-		/** free all */
-		free(tokens);/**_free_tokens(tokens)*/
-		free(line);
+	buffer = (char *)calloc(sizeof(char), buf_size);
+	if (buffer == NULL) {
+		perror("Malloc failure");
+		return (EXIT_FAILURE);
 	}
-	exit(EXIT_SUCCESS);
-	return (0);
-}
+
+
+	while (getline(&buffer, &buf_size, stdin) > 0) {
+		cmd = split(buffer, " \n\t");
+		get_absolute_path(cmd);
+
+		if (cmd[0] == NULL)
+			printf("Command not found\n");
+		else
+			exec_cmd(cmd);
+
+		free_array(cmd);
+
+	}
+
+	free(buffer);
+	}
 

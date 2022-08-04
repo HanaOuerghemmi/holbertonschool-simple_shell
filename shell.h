@@ -41,6 +41,11 @@ void sh_exit(__attribute__ ((unused)) char **args);
 void sh_help(__attribute__ ((unused)) char **args);
 void SIG_N(int signal);
 
+char **split(char *raw_cmd, char *limit);
+void exec_cmd(char **cmd);
+void get_absolute_path(char **cmd);
+void	free_array(char **array);
+
 
 
 
