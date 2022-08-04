@@ -3,47 +3,26 @@
  * exec - function execute the commande
  * @args: the commande to execute
  */
-void exec(char **args)
+ void	exec_cmd(char **cmd)
 {
-	int i;
-	pid_t child_pid;
-	int status;
-	builtin builtins[] = {
-							{"help", sh_help}, {"exit", sh_exit}, {"cd", sh_cd},
-						};
+	pid_t	pid = 0;
+	int		status = 0;
 
-int num_builtins = sizeof(builtins) / sizeof(struct builtin);
-
-	for (i = 0; i < num_builtins; i++)
-	{
-		if (strcmp(args[0], builtins[i].name) == 0)
-		{
-			builtins[i].func(args);
-			return;
-		}
-	}
-	/** fork: create a child process  =0*/
-			/**<0 unsccessful  >0 return the parent */
-	child_pid = fork();
-
-	if (child_pid == 0)
-	{
-		execvp(args[0], args);
-		/** takes in the name of the UNIX command to run as the first argument*/
-		perror(args[0]);/** prints a descriptive error message to stderr*/
-		exit(1);
-	}
-	else if (child_pid > 0)
-	{
-		do {
-			waitpid(child_pid, &status, WUNTRACED);
-		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
-		/** WIFEXITED and WIFSIGNALED both be false*/
-		/** Is it guaranteed that the process was not killed in this case*/
-	}
-	else
-	{
-		perror("shell");
+	
+	pid = fork();
+	if (pid == -1)
+		perror("fork");
+	/*Si le fork a reussit, le processus pere attend l'enfant (process fork)*/
+	else if (pid > 0) {
+		/* On block le processus parent jusqu'a ce que l'enfant termine puis */
+		/* on kill le processus enfant */
+		waitpid(pid, &status, 0);
+		kill(pid, SIGTERM);
+	} else {
+		/* Le processus enfant execute la commande ou exit si execve echoue */
+		if (execve(cmd[0], cmd, NULL) == -1)
+			perror("shell");
+		exit(EXIT_FAILURE);
 	}
 }
 
