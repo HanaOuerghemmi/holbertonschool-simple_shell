@@ -42,7 +42,7 @@ Parse or traite the commande
 <br>
 			Pic 6
 			<br>
-Execute the commande
+Execute the commande :
 <br>
 		. 	Search the commande in the environment
 		<br>
