@@ -3,7 +3,7 @@
  * main - program main of the shell
  * Return: 0
  */
-int	main()
+int	main( void )
 {
 	char	*buffer = NULL;
 	size_t	buf_size = 2048;
@@ -30,5 +30,6 @@ int	main()
 	}
 
 	free(buffer);
+	return (0);
 	}
 
