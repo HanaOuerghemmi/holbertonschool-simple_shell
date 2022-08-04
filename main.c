@@ -29,6 +29,7 @@ int	main(void)
 		{
 			free_array(cmd);
 			exit(0);
+
 		}
 		if (strcmp(cmd[0], "env") == 0)
 		{
