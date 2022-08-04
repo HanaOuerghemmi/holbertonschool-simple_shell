@@ -1,11 +1,10 @@
-
 #include "shell.h"
+/**
+ * get_absolute_path - function that read the path
+ * @cmd: the commande
+ */
 
-
-
-
-
- void	get_absolute_path(char **cmd)
+void get_absolute_path(char **cmd)
 {
 	int i;
 	char	*path = strdup(getenv("PATH"));
@@ -17,7 +16,8 @@
 
 	/* si cmd n'est pas le chemin absolue, on cherche le chemin absolue du */
 	/* binaire grace a la variable d'environment PATH */
-	if (cmd[0][0] != '/' && strncmp(cmd[0], "./", 2) != 0) {
+	if (cmd[0][0] != '/' && strncmp(cmd[0], "./", 2) != 0)
+	{
 
 		/* On split le path pour verifier ou ce trouve le binaire */
 		path_split = split(path, ":");
@@ -25,7 +25,8 @@
 		path = NULL;
 
 		/* On boucle sur chaque dossier du path pour trouver l'emplacement du binaire */
-		for (i = 0; path_split[i]; i++) {
+		for (i = 0; path_split[i]; i++)
+		{
 			/* alloc len du path + '//' + len du binaire + 1 pour le '\0' */
 			bin = (char *)calloc(sizeof(char), (strlen(path_split[i]) + 1 + strlen(cmd[0]) + 1));
 			if (bin == NULL)
@@ -36,9 +37,9 @@
 			strcat(bin, "/");
 			strcat(bin, cmd[0]);
 
-			/* On verfie l'existence du fichier et on quitte la boucle si access  => renvoi 0 */
+	/* On verfie l'existence du fichier et on quitte la boucle si access  => renvoi 0 */
 			if (access(bin, F_OK) == 0)
-				break ;
+				break;
 
 			/* Nous sommes des gens propre :D */
 			free(bin);
@@ -50,7 +51,8 @@
 		/* n'existe pas */
 		free(cmd[0]);
 		cmd[0] = bin;
-	} else {
+	} else
+	{
 		free(path);
 		path = NULL;
 	}
