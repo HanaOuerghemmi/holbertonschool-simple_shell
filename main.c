@@ -17,7 +17,7 @@ int	main( void )
 
 
 	while (getline(&buffer, &buf_size, stdin) > 0) {
-		cmd = split(buffer, " \n\t");
+		cmd = split(buffer, " \t\r\n");
 		get_absolute_path(cmd);
 
 		if (cmd[0] == NULL)
@@ -30,6 +30,7 @@ int	main( void )
 	}
 
 	free(buffer);
+	exit(EXIT_SUCCESS);
 	return (0);
 	}
 
