@@ -27,7 +27,7 @@ int	main(void)
 			exit(EXIT_SUCCESS);
 		if (strcmp(cmd[0], "exit") == 0)
 		{
-			free(cmd);
+			free_array(cmd);
 			exit(0);
 		}
 		if (strcmp(cmd[0], "env") == 0)
