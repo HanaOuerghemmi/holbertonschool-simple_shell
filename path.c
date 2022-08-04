@@ -3,7 +3,6 @@
  * get_absolute_path - function that read the path
  * @cmd: the commande
  */
-
 void get_absolute_path(char **cmd)
 {
 	int i;
@@ -11,49 +10,39 @@ void get_absolute_path(char **cmd)
 	char	*bin = NULL;
 	char	**path_split = NULL;
 
-	if (path == NULL) /* si le path est null, on cree un path */
+	if (path == NULL) /*if the path NULL we will create one*/
 		path = strdup("/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin");
-
-	/* si cmd n'est pas le chemin absolue, on cherche le chemin absolue du */
-	/* binaire grace a la variable d'environment PATH */
+	/* if cmd isnt the path we will find it in the bunary with env path*/
 	if (cmd[0][0] != '/' && strncmp(cmd[0], "./", 2) != 0)
 	{
-
-		/* On split le path pour verifier ou ce trouve le binaire */
+		/* split path for verif if found it*/
 		path_split = split(path, ":");
 		free(path);
 		path = NULL;
-
-		/* On boucle sur chaque dossier du path pour trouver l'emplacement du binaire */
+		/* loop diract of path until find it*/
 		for (i = 0; path_split[i]; i++)
 		{
-			/* alloc len du path + '//' + len du binaire + 1 pour le '\0' */
-			bin = (char *)calloc(sizeof(char), (strlen(path_split[i]) + 1 + strlen(cmd[0]) + 1));
+			/* alloc len path + '//' + len  binaire + 1 for the '\0' */
+			bin = calloc(sizeof(char), (strlen(path_split[i]) + 1 + strlen(cmd[0]) + 1));
 			if (bin == NULL)
-				break ;
-
-			/* On concat le path , le '//' et le nom du binaire */
+				break;
+			/* concat path , the '//' and cmd */
 			strcat(bin, path_split[i]);
 			strcat(bin, "/");
 			strcat(bin, cmd[0]);
-
-	/* On verfie l'existence du fichier et on quitte la boucle si access  => renvoi 0 */
+	/* verfif the file exist and exit the loop if the acc=> 0 */
 			if (access(bin, F_OK) == 0)
 				break;
-
-			/* Nous sommes des gens propre :D */
+			/* free freee it */
 			free(bin);
 			bin = NULL;
 		}
 		free_array(path_split);
-
-		/* On remplace le binaire par le path absolue ou NULL si le binaire */
-		/* n'existe pas */
+		/* replace cmd with  path or  NULL if cmd not found */
 		free(cmd[0]);
 		cmd[0] = bin;
 	} else
 	{
 		free(path);
-		path = NULL;
-	}
+		path = NULL;	}
 }
