@@ -62,7 +62,7 @@ There are two ways of writing functions:
 * Check this flowchart explaining the functions flow
 ![flowchart](flowchart.jpg)
 
-<h4 for more information check the</h4> 
+<h4 for more information check the</h4> gi
 * [man page](https://github.com/HanaOuerghemmi/holbertonschool-simple_shell/blob/main/man_1_simple_shell)
 
 
