@@ -9,6 +9,7 @@ int	main(void)
 	size_t	buf_size = 2048;
 	char **cmd;
 	struct stat status;
+	int statuss;
 
 	buffer = calloc(sizeof(char), buf_size);
 	if (buffer == NULL)
@@ -28,7 +29,12 @@ int	main(void)
 		if (strcmp(cmd[0], "exit") == 0)
 		{
 			free(cmd);
-			exit(1);
+			exit(0);
+		}else{
+			statuss = atoi (cmd[1]);
+			free_array(cmd);
+			exit(statuss);
+
 		}
 		if (strcmp(cmd[0], "env") == 0)
 		{
