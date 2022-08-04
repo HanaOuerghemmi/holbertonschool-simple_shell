@@ -30,11 +30,6 @@ int	main(void)
 		{
 			free(cmd);
 			exit(0);
-		}else{
-			statuss = atoi (cmd[1]);
-			free_array(cmd);
-			exit(statuss);
-
 		}
 		if (strcmp(cmd[0], "env") == 0)
 		{
