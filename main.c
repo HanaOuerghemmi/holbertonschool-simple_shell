@@ -9,7 +9,6 @@ int	main(void)
 	size_t	buf_size = 2048;
 	char **cmd;
 	struct stat status;
-	int statuss;
 
 	buffer = calloc(sizeof(char), buf_size);
 	if (buffer == NULL)
