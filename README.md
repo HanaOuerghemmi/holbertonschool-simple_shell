@@ -53,7 +53,7 @@ Execute the commande :
 		.	free the memory return the output and return at the beginning
 		<br>
 
-A function is a block of code that is reusable and performs certain operations. Like any other programming language, Shell-Scripting also supports functions. Functions are popular for the following reasons:
+Shell is a block of codes that is reusable and performs certain operations. Like any other programming language, Shell-Scripting also supports functions. Functions are popular for the following reasons:
 
 * Help to reuse a piece of code.
 * Improve the readability of the program.
